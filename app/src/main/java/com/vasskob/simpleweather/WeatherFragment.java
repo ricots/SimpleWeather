@@ -124,18 +124,19 @@ public class WeatherFragment extends Fragment {
             double latitude_json = json.getJSONObject("coord").getDouble("lat");
             double longitude_json = json.getJSONObject("coord").getDouble("lon");
 
+            JSONObject details = json.getJSONArray("weather").getJSONObject(0);
+            JSONObject main = json.getJSONObject("main");
+            JSONObject wind = json.getJSONObject("wind");
+
+            setWeatherIcon(details.getInt("id"), sunrise_json * 1000, sunset_json * 1000);
 
             cityField.setText(String.format("%s, %s", json.getString("name").toUpperCase(Locale.US),
                     json.getJSONObject("sys").getString("country")));
 
             String location = latitude_json + ", " + longitude_json;
             Preferences.setStringPreferences(getContext(), "CITY_LOCATION", location);
+
             cityCoordinates.setText(getString(R.string.city_location, location));
-
-            JSONObject details = json.getJSONArray("weather").getJSONObject(0);
-            JSONObject main = json.getJSONObject("main");
-            JSONObject wind = json.getJSONObject("wind");
-
             description.setText(StringFormater.capitalize(details.getString("description")));
             detailsField.setText(String.format("Wind                                %s km/h  %s°\nHumidity                         %s%%\nPressure                         %s mBar", String.format("%.0f", wind.getDouble("speed")), String.format("%.0f", wind.getDouble("deg")), main.getString("humidity"), String.format("%.0f", main.getDouble("pressure"))));
             detailsPressure.setText(String.format("Sea level pressure                       %s mBar\nGround level pressure                 %s mBar", String.format("%.0f", main.getDouble("sea_level")), String.format("%.0f", main.getDouble("grnd_level"))));
@@ -149,8 +150,6 @@ public class WeatherFragment extends Fragment {
             String updatedOn = df.format(new Date(json.getLong("dt") * 1000));
             updatedField.setText(updatedOn);
 
-            setWeatherIcon(details.getInt("id"), sunrise_json * 1000, sunset_json * 1000);
-
             SimpleDateFormat dateFormat = new SimpleDateFormat("hh.mm aa", Locale.US);
             sunrise.setText(dateFormat.format(CityTimeZone.getCorrectTime(
                     latitude_json, longitude_json, sunrise_json, getString(R.string.google_maps_api_key))));
@@ -160,6 +159,9 @@ public class WeatherFragment extends Fragment {
 
         } catch (Exception e) {
             Log.e("SimpleWeather", "One or more fields not found in the JSON data");
+            Toast.makeText(getActivity(),
+                    getActivity().getString(R.string.try_again),
+                    Toast.LENGTH_SHORT).show();
 
         }
     }

@@ -10,6 +10,7 @@
 
     <string name="change_city">Change city</string>
     <string name="place_not_found">Sorry, no weather data found.</string>
+    <string name="try_again">Please, try again.</string>
     <string name="current_details">Current details</string>
     <string name="arrow_down">\u21D3</string>
     <string name="open_weather">openweathermap.org</string>
