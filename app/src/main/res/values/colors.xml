@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF0099CC</color>
+    <color name="colorPrimaryDark">#FF0099CC</color>
+    //color for Change city window
+    <color name="colorAccent">#FF0099CC</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="red">#C62828</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Weather</string>
+
+    <!-- Put your own openweathermap API Key here -->
+    <string name="open_weather_map_api_key">44db6a862fba0b067b1930da0d769e98</string>
+    <!-- Put your own google maps API Key here -->
+    <string name="google_maps_api_key">AIzaSyBN_EChsv0tLvE_ZWB6ukOkC6qM0JnWOWg</string>
+
+    <string name="change_city">Change city</string>
+    <string name="place_not_found">Sorry, no weather data found.</string>
+    <string name="current_details">Current details</string>
+    <string name="arrow_down">\u21D3</string>
+    <string name="open_weather">openweathermap.org</string>
+    <string name="sunrise_sunset">Sunrise &amp; sunset</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="map_location">Map Location</string>
+    <string name="city_location">coord: (%1$s)</string>
+
+</resources>
