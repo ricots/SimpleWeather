@@ -10,6 +10,6 @@ Some times openweathermap.org return json without some parameters. Its can be :
  "temp_min", "temp_max" , "sea_level" ,  "grnd_level", "sunrise", "sunset" and others. 
 In that case some weather information can be untrue.
 
-![alt tag](https://github.com/vasskob/SimpleWeather/Screenshots/pic1.png)
-![alt tag](https://github.com/vasskob/SimpleWeather/Screenshots/pic2.png)
-![alt tag](https://github.com/vasskob/SimpleWeather/Screenshots/pic3.png)
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic1.png)
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic2.png)
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic3.png)
