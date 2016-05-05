@@ -13,3 +13,10 @@ In that case some weather information can be untrue.
 ![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic1.png)
 ![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic2.png)
 ![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic3.png)
+
+More functional app based on original google weather app and forecast.io API comming soon.
+
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic4.png)
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic5.png)
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic6.png)
+![alt tag](https://github.com/vasskob/SimpleWeather/blob/master/Screenshots/pic7.png)
